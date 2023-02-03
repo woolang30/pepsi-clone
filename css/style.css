@@ -7,9 +7,15 @@ css 기본선택자
 4) 그룹선택자 : p, .my-app, #titile
 
 */
+*{ margin: 0; padding: 0;}
 
+a{
+    color:red
+text-decoration: none;
+}
 
-{margin: 0;
-
-padding: 0;}
-
+.logo {
+width:100px;
+margin: 0 auto;
+padding: 20px;
+}

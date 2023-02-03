@@ -3,6 +3,6 @@
 
 ## 개발환경
 
--chrome / Edge web browser
+-Chrome / Edge web browser
 -visual studio code
 -git
