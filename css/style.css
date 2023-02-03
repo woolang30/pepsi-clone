@@ -10,8 +10,9 @@ css 기본선택자
 *{ margin: 0; padding: 0;}
 
 a{
-    color:red
+    color:red;
 text-decoration: none;
+background-color:#005891;
 }
 
 .logo {
@@ -19,3 +20,17 @@ width:100px;
 margin: 0 auto;
 padding: 20px;
 }
+
+.menu {
+
+    padding: 20px;
+    text-align: center;
+    background-color:#005891;
+color:white;
+}
+
+a{ 
+    color:white;
+    margin: 20px;
+    }
+
