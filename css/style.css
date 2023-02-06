@@ -7,37 +7,96 @@ css 기본선택자
 4) 그룹선택자 : p, .my-app, #titile
 
 */
-*{ margin: 0; padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
 
-a{
-    color:red;
-text-decoration: none;
-background-color:#005891;
+a {
+    color: red;
+    text-decoration: none;
+    background-color: #005891;
 }
 
 .logo {
-width:100px;
-margin: 0 auto;
-padding: 20px;
+    width: 100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .menu {
 
     padding: 20px;
     text-align: center;
-    background-color:#005891;
-color:white;
+    background-color: #005891;
+    color: white;
 }
 
-a{ 
-    color:white;
+a {
+    color: white;
     margin: 20px;
-    }
+}
 
-.hero{
-    width:800px;
+.hero {
+    width: 800px;
     height: 500px;
     margin: 0 auto;
     padding: 10px;
 
 }
+
+.hide {
+    display: none;
+
+}
+
+
+.msub_img {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    background-image: #f3f3f3;
+    font-size: 0px;
+}
+
+.movie-title {
+    font-size: 22px;
+    text-align: center;
+text-transform: uppercase;
+margin: 2rem 0 1rem 0;
+}
+
+.movie-size {
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+
+}
+
+.social{
+    text-align: center;
+    margin: 2rem 1rem;
+}
+.contact, .location {
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    margin: 2rem 1rem;
+    text-transform: uppercase;
+}
+
+#line {
+    margin: 3rem 0; /* 위 아래 3rem 좌, 우 0 (=적용안함) */
+}
+
+.location p:nth-child(1) {
+    margin: 0.9rem 0;
+font-size: 1.2rem;   
+}
+
+.location p:nth-child(2) {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+    
+    }
+    
