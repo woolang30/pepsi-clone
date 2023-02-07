@@ -1,123 +1,132 @@
-/*
-
-css 기본선택자
-1) 전체 선택자:*
-2) 태그선텍자: 태그명 ex>p
-3) 클래스 선택자 : #아이명   #title
-4) 그룹선택자 : p, .my-app, #titile
-
+/* 
+    ============== CSS 기본 선택자 =======================
+    1) 전체 선택자 : *
+    2) 태그 선택자 : 태그명 ex> p
+    3) 클래스 선택자 : .클래스명   ex>   .my-app
+    4) 아이디 선택자 : #아이디명   ex>   #title
+    5) 그룹 선택자 : p, .my-app, #title
+    =====================================================
 */
-* {
-    margin: 0;
-    padding: 0;
-}
 
-a {
+* {
+    margin: 0; /* (안)여백 : 없음 */
+    padding: 0; /* (바깥)여백 : 없음 */
+  }
+  a {
     color: red;
     text-decoration: none;
-    background-color: #005891;
-}
-
-.logo {
+  }
+  /*
+  선택자 {
+      속성1: 속성값1;
+      속성2: 속성값2;
+      ...계속..
+  }
+  */
+  .logo {
     width: 100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.burger {
+    margin: 0 auto; /* 수평-중앙 배치 */
+    padding: 50px 0; /* 상,하 50픽셀 */
+  }
+  .opener {
+    /* was burger */
     display: none;
     position: absolute;
     top: 100px;
     right: 7%;
   }
+  .menu {
+    
+    position: absolute    ;
+right: 0;
 
-
-.menu {
-
-    padding: 20px;
+    padding: 20px 0; /* 상,하 50픽셀 */
     text-align: center;
-    background-color: #005891;
+    background-color: #005891; /* 배경 색상 */
+  }
+  a {
     color: white;
-}
-
-a {
-    color: white;
-    margin: 20px;
-}
-
-.hero {
+    margin: 10px;
+  }
+  .hero {
     width: 800px;
-    height: 500px;
     margin: 0 auto;
-    padding: 10px;
-
-}
-
-.hide {
-    display: none;
-
-}
-
-
-.msub_img {
+    padding: 10px 0;
+  }
+  .hide {
+    display: none; /* 화면 표시: 안함 */
+  }
+  .movie {
+    /* 클래스 movie의 스타일을 결정한다 */
     width: 600px;
-    height: 500px;
     margin: 0 auto;
-    background-image: #f3f3f3;
-    font-size: 0px;
-}
-
-.movie-title {
+    font-size: 0;
+  }
+  .movie-title {
     font-size: 22px;
     text-align: center;
-text-transform: uppercase;
-margin: 2rem 0 1rem 0;
-}
-
-.movie-size {
+    text-transform: uppercase; /* 대문자 */
+    margin: 2rem 0 1rem 0; /*  상->우->하->왼 순서 */
+  }
+  .movie-desc {
+    text-align: center;
     font-size: 16px;
-    color: #555555;
+    color: #555555; /* HEX 색상 표기법 */
+  }
+  .social {
+    text-align: center; /* 그림<--텍스트10.. */
+    margin: 2rem 1rem; /* (밖)여백 : 상하 2배, 좌우 기본값 */
+  }
+  #line {
+    margin: 3rem 0; /* 위, 아래 3rem 좌,우 0(=적용 안함) */
+  }
+  .contact,
+  .location {
+    /* Q. 왜? <h2 class="movie-title">과 다른가? */
     text-align: center;
-
-}
-
-.social{
-    text-align: center;
-    margin: 2rem 1rem;
-}
-.contact, .location {
-    font-size: 16px;
-    color: #555555;
-    text-align: center;
-    margin: 2rem 1rem;
-    text-transform: uppercase;
-}
-
-#line {
-    margin: 3rem 0; /* 위 아래 3rem 좌, 우 0 (=적용안함) */
-}
-
-.location p:nth-child(1) {
-    margin: 0.9rem 0;
-font-size: 1.2rem;   
-}
-
-.location p:nth-child(2) {
-        margin: 1rem 0;
-        font-size: 0.9rem;
-    
+  }
+  .location p:nth-child(1) {
+    /* 두개의 p중에서 첫번째 (자식요소) p */
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  .location p:nth-child(2) {
+    margin-bottom: 3rem; /* 두개의 p중에서 두번째 (자식요소) p */
+    font-size: 0.9rem;
+  }
+  #closer {
+    font-size: 2rem;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    display: block;
+    margin: 0 0 10rem 0;
+    /* text-align: right; */
+    /* direction: rtl; */
+  }
+  /* 반응형 웹(=모바일)을 위한 미디어쿼리 삽입(Media Query) */
+  @media screen and (max-width: 430px) {
+    .opener {
+      display: block; /* block level element : 블럭요소 */
     }
     
-/* 반응형 웹을 위한 미디어쿼리 삽입(Media Query) */
-@media screen and (max-width: 430px) {
+  .menu {
+    position: absolute;
+    width: 76.74418604651163%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(19, 30, 68, 0.8);
+    background-image: url("../images/mobile-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
-    .burger {
-        
-        display: block; /* block level element : 블럭요소 */
-        
-    }
-    .menu{
-        display: none;
-    }
+  .menu a{
+
+    display: block;
+    text-align: left;
+  }
     .hero {
       width: 100%;
     }
@@ -130,8 +139,8 @@ font-size: 1.2rem;
     }
     .movie img {
       /* 2개의 img에 적용 */
-      width: 80%;
-      margin: 10%, 15%;
+      width: 70%;
+      margin: 10% 15%;
       object-fit: cover;
     }
     .movie img:nth-of-type(2) {
