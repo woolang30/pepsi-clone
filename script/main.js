@@ -4,11 +4,11 @@ const closer = document.querySelector("#closer"); // 기호
 const menu = document.querySelector(".menu");
 
 opener.addEventListener("click", function () {
-  menu.classList.remove("hide");
-  console.log("hide 클래스를 제거했습니다");
+  menu.classList.remove("hide"); //실제로는 문제없지만, 테스트 환경을 고려
+  // menu.style.display = "block";
 });
 
 closer.addEventListener("click", function () {
-  menu.classList.add("hide");
-  console.log("hide 클래스를 추가했습니다");
+  menu.classList.add("hide"); //실제로는 문제없지만, 테스트 환경을 고려
+  //menu.style.display = "none";
 });
